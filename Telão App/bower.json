@@ -1,0 +1,17 @@
+{
+  "name": "angular-starter",
+  "description": "AngularJS app starter",
+  "version": "0.0.1",
+  "homepage": "https://github.com/popularowl/angular-starter",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-mocks": "1.2.x",
+    "angular-tek-progress-bar": "^0.2.0",
+    "pg.progress-bars": "^0.2.1",
+    "ng-file-upload": "^12.0.4",
+    "angular-progress": "https://github.com/platanus/angular-progress.git",
+    "jquery.transit": "^0.9.12"
+  }
+}

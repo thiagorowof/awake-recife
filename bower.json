@@ -1,0 +1,14 @@
+{
+  "name": "angular-starter",
+  "description": "App do sarau recife",
+  "version": "0.0.1",
+  "homepage": "https://innersource.accenture.com/saraudigitalwebapp",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-mocks": "1.2.x",
+    "seiyria-bootstrap-slider": "^7.1.1",
+    "angular-ui-router": "^0.3.0"
+  }
+}

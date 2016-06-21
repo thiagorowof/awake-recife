@@ -1,0 +1,36 @@
+<div class="header home">
+  <img src="resources/images/logo_header-01.png">
+</div>
+
+<div class="lista-bandas">
+  <a href="javascript:;" class="banda-linha">
+      <div class="img-banda">
+        <img src="https://firebasestorage.googleapis.com/v0/b/project-8616263356669679321.appspot.com/o/08_01_aquarela.jpg?alt=media&token=1a693846-b4dc-46f7-8643-4d433e925f36">
+      </div>
+      <div class="banda-info" style="background-image: none !important;">
+        <h4>Exposição Aquarela</h4>
+        <p class="live"> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> A partir das 18:30 </p>
+      </div>
+  </a>
+  <a ng-repeat="band in bands" ui-sref="banda({bandaname: $index})" class="banda-linha">
+    <!-- ng-repeat="band in bands | orderBy: band.showtime:reverse"  -->
+    <div class="img-banda">
+      <img ng-src="{{band.image}}">
+    </div>
+    <div class="banda-info">
+      <h4>{{band.bandname}}</h4>
+      <span>{{band.showtime}}</span>
+      <span class="live" ng-if="band.status == 'presenting'">Ao vivo</span>
+    </div>
+  </a>
+
+  <!--<a href="javascript:;" class="banda-linha">
+      <div class="img-banda">
+        <img src="https://firebasestorage.googleapis.com/v0/b/project-8616263356669679321.appspot.com/o/thankyou.jpg?alt=media&token=53fbd80c-076d-4123-afbf-7bd6d3be07e4">
+      </div>
+      <div class="banda-info">
+        <h4>Agradecimentos</h4>
+        <p class="live"> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 18:30 </p>
+      </div>
+  </a> -->
+</div>

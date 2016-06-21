@@ -1,0 +1,64 @@
+<div class="resposta sucesso">
+  <div class="contentsteste">
+    <img src="resources/images/icn_sucesso.png"/>
+    <p>Seu voto foi recebido com sucesso.</p>
+    <p>Obrigado!</p>
+  </div>
+</div>
+
+<div class="resposta error">
+  <div class="contentsteste">
+    <img src="resources/images/icn_error-01.png"/>
+    <p>Não conseguimos computar seu voto!</p>
+    <p>Tente novamente.</p>
+  </div>
+</div>
+
+<div class="header banda">
+  <a ui-sref="home" class="back"></a>
+  <img src="resources/images/logo_header-01.png">
+</div>
+
+<div id="bodyBandaView">
+  <div class="foto" style="
+    background: url({{bands[$stateParams.bandaname].image}});
+    background-position: center center;
+    background-size: cover;
+">
+    <!-- <img ng-src="{{bands[$stateParams.bandaname].image}}"> -->
+    <div class="img-infos">
+      <h3>{{bands[$stateParams.bandaname].bandname}}</h3>
+      <h4>{{bands[$stateParams.bandaname].gender}} <span>{{bands[$stateParams.bandaname].showtime}}</span></h4>
+    </div>
+  </div>
+
+  <p>
+    {{bands[$stateParams.bandaname].description}}
+  </p>
+
+  <div class="integrantes-lista">
+    <div class="nome-integrante" ng-repeat="(integrante, dadosIntegrante) in bands[$stateParams.bandaname].integrantes">
+      <h3>{{integrante}}</h3>
+      <span ng-repeat="(instrumento,  dadosInstrumentos) in dadosIntegrante.instruments" class="{{instrumento}}"></span>
+    </div>
+  </div>
+
+  <div class="container-voto" ng-show="bands[$stateParams.bandaname].status == 'presenting'">
+    <h3>Vote Agora</h3>
+    <h4>Gostou da atração? Vote para ela ser a melhor:</h4>
+    <div class="bar-wrap">
+      <img src="resources/images/voto_icn_like-01.png" class="down">
+      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-tooltip="hide" data-slider-min="100" data-slider-max="300" data-slider-step="10" data-slider-value="200" ng-model="score"/>
+      <img src="resources/images/voto_icn_clap-01.png" class="top">
+    </div>
+    <button type="button" name="button" ng-click="teste()" id="votarBtn">Confirmar!</button>
+  </div>
+
+  <div class="container-voto" ng-hide="bands[$stateParams.bandaname].status == 'presenting'">
+    <h3>Votação Indisponível</h3>
+    <h4>A votação não está disponível para esta atração. :( </h4>
+    <button type="button" name="button" ui-sref="home" id="votarBtn">Voltar para programação</button>
+  </div>
+
+
+</div>

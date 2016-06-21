@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="mostPopularListingsApp" class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accenture Sarau</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=320, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/sarau.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="resources/bower/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
+  </head>
+
+  <body>
+    <div class="splash">
+      <img src="resources/images/logo_splash_2x.png"/>
+    </div>
+
+    <div id="view" ui-view></div>
+
+    <script src="resources/bower/jquery/dist/jquery.js"></script>
+    <script src="resources/bower/angular/angular.js"></script>
+    <script src="resources/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="resources/bower/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+    <script src="resources/js/firebaseinitialize.js"></script>
+    <script src="resources/js/requestanimframe.js"></script>
+
+    <script src="app.js"></script>
+    <script src="components/services/myService.js"></script>
+    <script src="components/controllers/BandaController.js"></script>
+    <script src="components/controllers/HomeController.js"></script>
+    <script src="components/controllers/LoginController.js"></script>
+
+    <div class="blocker">
+      <img src="resources/images/orientation.png"/>
+    </div>
+
+  </body>
+</html>
