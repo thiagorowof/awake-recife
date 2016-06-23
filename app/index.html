@@ -17,13 +17,16 @@
 
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/sarau.css">
+    <link rel="stylesheet" href="resources/css/slider.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="resources/bower/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
+    <!-- <link rel="stylesheet" href="resources/bower/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" /> -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
   </head>
 
   <body>
     <div class="splash">
-      <img src="resources/images/logo_splash_2x.png"/>
+      <img src="resources/images/logo_awake.png"/>
     </div>
 
     <div id="view" ui-view></div>
@@ -31,14 +34,18 @@
     <script src="resources/bower/jquery/dist/jquery.js"></script>
     <script src="resources/bower/angular/angular.js"></script>
     <script src="resources/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="resources/bower/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+    <script src="resources/js/bootstrap-slider.js"></script>
+    <!-- <script src="resources/bower/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
     <script src="resources/js/firebaseinitialize.js"></script>
     <script src="resources/js/requestanimframe.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
     <script src="app.js"></script>
     <script src="components/services/myService.js"></script>
-    <script src="components/controllers/BandaController.js"></script>
+    <script src="components/controllers/WelcomeController.js"></script>
+    <script src="components/controllers/GrupoController.js"></script>
     <script src="components/controllers/HomeController.js"></script>
     <script src="components/controllers/LoginController.js"></script>
 

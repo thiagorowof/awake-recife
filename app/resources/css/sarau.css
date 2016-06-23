@@ -64,7 +64,8 @@ body{
 .splash {
     top:0;
     left:0;
-    background-image: url("../images/backgroundSplash.png");
+    /*background-image: url("../images/backgroundSplash.png");*/
+    background-color: #dcfbff;
     display: block;
     height: 100%;
     width: 100%;

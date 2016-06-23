@@ -3,17 +3,22 @@
 </div>
 
 <div class="welcomeCenter">
-  <img class="welcomeTop" src="resources/images/intro_banda-01.png">
-  <p class="paragrafo">Que tal ver esse pessoal sério, que fica o dia todo focado no monitor, mostrando seu lado artístico?</p>
-  <p class="paragrafo">O sarau é uma oportunidade única de desenvolvimento cultural, expressão musical e literária.</p>
-  <p class="paragrafo">Acesse a programação e veja do que eles são capazes!</p>
-
+  <form action="#" method="post">
+		Entre com o login:<br /><br />
+		<div>
+		    <label for="email">Param 1:</label>
+		    <input type="text" id="email"/>
+		</div>
+		<div>
+		    <label for="password">Param 2:</label>
+		    <input type="email" id="password"/>
+		</div>
+    <button type="button" name="button" ng-click="login()">Logar</button>
+	</form>
 
   <!--
   -ver frases e como fazer o botão de acordo com o status de apresentação
   -->
 
-  <button type="button" name="button" ui-sref="home" id="acessarBtn">ACESSE A PROGRAMAÇÃO</button>
 
 </div>
-<img class="welcomeBottom" src="resources/images/intro_plateia-01.png">

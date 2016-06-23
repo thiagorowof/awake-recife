@@ -3,9 +3,14 @@
 var mostPopularListingsApp = angular.module('mostPopularListingsApp',['ui.router']);
 // var body = document.getElementsByTagName('body')[0];
 
+// setTimeout(function() {
+// 	$('.splash').fadeOut(400);
+// }, 1000);
+
 setTimeout(function() {
-	$('.splash').fadeOut(400);
-}, 4000);
+	var fade = { opacity: 0, transition: 'opacity 5s' };
+  $('.splash').css(fade).slideUp(900);
+}, 2000);
 
 window.addEventListener("orientationchange", function() {
 	setTimeout(function() {
@@ -28,16 +33,17 @@ mostPopularListingsApp.config(function($stateProvider, $urlRouterProvider, $loca
 	$stateProvider
 		.state('welcome', {
 			url: "/",
-			templateUrl: "components/views/welcomeView.html"
+			templateUrl: "components/views/welcomeView.html",
+			controller  : "WelcomeController"
 		})
     .state('home', {
       url: "/home",
       templateUrl: "components/views/homeView.html",
 			controller  : "HomeController"
     })
-		.state('banda', {
-      url: "/banda/:bandaname",
-      templateUrl: "components/views/bandaView.html",
-			controller  : "BandaController"
+		.state('grupo', {
+      url: "/grupo/:gruponome",
+      templateUrl: "components/views/grupoView.html",
+			controller  : "GrupoController"
     });
 });

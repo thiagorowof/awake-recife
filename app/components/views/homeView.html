@@ -3,34 +3,34 @@
 </div>
 
 <div class="lista-bandas">
-  <a href="javascript:;" class="banda-linha">
+  <div ng-repeat="grupo in grupos" id="VotarGrupos">
+    <a class="banda-linha" data-toggle="collapse" data-target="#collapse-{{$index}}">
+      <!-- no a:  ui-sref="grupo({gruponome: $index})" -->
+      <!-- ng-repeat="band in bands | orderBy: band.showtime:reverse"  -->
       <div class="img-banda">
-        <img src="https://firebasestorage.googleapis.com/v0/b/project-8616263356669679321.appspot.com/o/08_01_aquarela.jpg?alt=media&token=1a693846-b4dc-46f7-8643-4d433e925f36">
-      </div>
-      <div class="banda-info" style="background-image: none !important;">
-        <h4>Exposição Aquarela</h4>
-        <p class="live"> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> A partir das 18:30 </p>
-      </div>
-  </a>
-  <a ng-repeat="band in bands" ui-sref="banda({bandaname: $index})" class="banda-linha">
-    <!-- ng-repeat="band in bands | orderBy: band.showtime:reverse"  -->
-    <div class="img-banda">
-      <img ng-src="{{band.image}}">
-    </div>
-    <div class="banda-info">
-      <h4>{{band.bandname}}</h4>
-      <span>{{band.showtime}}</span>
-      <span class="live" ng-if="band.status == 'presenting'">Ao vivo</span>
-    </div>
-  </a>
-
-  <!--<a href="javascript:;" class="banda-linha">
-      <div class="img-banda">
-        <img src="https://firebasestorage.googleapis.com/v0/b/project-8616263356669679321.appspot.com/o/thankyou.jpg?alt=media&token=53fbd80c-076d-4123-afbf-7bd6d3be07e4">
+        <img ng-src="{{grupo.image}}" ui-sref="grupo({gruponome: $index})">
       </div>
       <div class="banda-info">
-        <h4>Agradecimentos</h4>
-        <p class="live"> <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 18:30 </p>
+        <h4>{{grupo.gruponome}}</h4>
+        <span>{{grupo.descricao}}</span>
       </div>
-  </a> -->
+    </a>
+    <div class="collapse" id="collapse-{{$index}}">
+      <div class="slide">
+        <input type="text" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after"data-slider-tooltip="hide">
+      </div>
+      <div id="bodyBandaView">
+        <div class="well container-voto">
+            <h3>Vote Agora</h3>
+            <h4>Gostou da atração? Vote para ela ser a melhor:</h4>
+            <!-- <div class="bar-wrap">
+              <img src="resources/images/voto_icn_like-01.png" class="down">
+              <input id="{{grupo.dado1}}" data-slider-id='ex{{grupo.dado1}}Slider' type="text" data-slider-tooltip="hide" data-slider-min="100" data-slider-max="300" data-slider-step="10" data-slider-value="200" ng-model="score"/>
+              <img src="resources/images/voto_icn_clap-01.png" class="top">
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -11,7 +11,7 @@
 // }])
 
 // Controller definition for this module
-mostPopularListingsApp.controller('BandaController', ['$scope', 'myService', '$timeout', '$stateParams', function($scope, myService, $timeout, $stateParams) {
+mostPopularListingsApp.controller('GrupoController', ['$scope', 'myService', '$timeout', '$stateParams', function($scope, myService, $timeout, $stateParams) {
 
 	$scope.$stateParams = $stateParams;
 
